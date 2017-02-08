@@ -1,0 +1,4 @@
+FROM mariadb:10.1
+MAINTAINER "YwClub" <root@ywclub.com>
+
+COPY ywclub.sql /docker-entrypoint-initdb.d/
