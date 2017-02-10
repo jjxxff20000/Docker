@@ -1,7 +1,7 @@
 FROM armhf/debian:jessie
 MAINTAINER "Cloth Mo" <root@buxiaomo.com>
 
-EVN MARIADB_MAJOR 10.0
+ENV MARIADB_MAJOR 10.0
 
 RUN { \
 	  echo mariadb-server-$MARIADB_MAJOR mysql-server/root_password password 'unused'; \
