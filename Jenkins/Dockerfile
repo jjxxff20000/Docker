@@ -37,7 +37,7 @@ RUN apt-get update \
 
 RUN apt-get update \
     && apt-get install axel -y \
-    && mkdir /usr/share/jenkins
+    && mkdir /usr/share/jenkins \
     && axel -n 100 --output=/usr/share/jenkins/jenkins.war https://mirrors.tuna.tsinghua.edu.cn/jenkins/war-stable/2.32.1/jenkins.war \
     && apt-get remove axel -y \
     && apt-get clean all \
