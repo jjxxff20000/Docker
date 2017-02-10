@@ -1,6 +1,8 @@
 FROM debian:jessie
 MAINTAINER "Cloth Mo" <root@buxiaomo.com>
 
+ENV Jenkins_Version 2.32.1
+
 COPY sources.list /etc/apt/sources.list
 
 RUN apt-get update \
@@ -38,7 +40,7 @@ RUN apt-get update \
 RUN apt-get update \
     && apt-get install axel -y \
     && mkdir /usr/share/jenkins \
-    && axel -n 100 --output=/usr/share/jenkins/jenkins.war https://mirrors.tuna.tsinghua.edu.cn/jenkins/war-stable/2.32.1/jenkins.war \
+    && axel -n 100 --output=/usr/share/jenkins/jenkins.war https://mirrors.tuna.tsinghua.edu.cn/jenkins/war-stable/${Jenkins_Version}/jenkins.war \
     && apt-get remove axel -y \
     && apt-get clean all \
     && rm -rf /var/lib/apt/lists/*
