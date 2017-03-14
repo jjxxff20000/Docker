@@ -3,7 +3,7 @@ MAINTAINER "Cloth Mo" <root@buxiaomo.com>
 
 ENV NGINX_VERSION 1.11.7
 
-COPY repositories /etc/apk/repositories
+# COPY repositories /etc/apk/repositories
 
 RUN apk add --no-cache wget g++ make jemalloc-dev pcre-dev openssl-dev geoip-dev \
 	&& mkdir -p /usr/local/src/ \
