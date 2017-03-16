@@ -1,0 +1,3 @@
+#!/bin/bash
+echo $ROOTPASS | passwd --stdin root
+/usr/sbin/sshd -D
