@@ -34,8 +34,8 @@ RUN apt-get update \
 
 RUN apt-get update \
     && apt-get install wget --no-install-recommends -y \
-    && wget -O /usr/local/src/docker-1.13.0.tgz  https://get.docker.com/builds/Linux/x86_64/docker-1.13.0.tgz \
-    && tar --strip-components=1 -xvzf /usr/local/src/docker-1.13.0.tgz -C /usr/local/bin
+    && wget -O /usr/local/src/docker-17.03.0-ce.tgz  https://get.docker.com/builds/Linux/x86_64/docker-17.03.0-ce.tgz \
+    && tar --strip-components=1 -xvzf /usr/local/src/docker-17.03.0-ce.tgz -C /usr/local/bin
 
 RUN apt-get update \
     && apt-get install axel -y \
